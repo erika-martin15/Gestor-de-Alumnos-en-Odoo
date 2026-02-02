@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- VISTA FORMULARIO CALIFICACIONES -->
+    <record id="view_nota_form" model="ir.ui.view">
+        <field name="name">plaiaundi.nota.form</field>
+        <field name="model">plaiaundi.nota</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2" colspan="2">
+                        <field name="student_id"/>
+                        <field name="teacher_id"/>
+                        <field name="subject"/>
+                        <field name="evaluation"/>
+                        <field name="grade"/>
+                        <field name="date"/>
+                    </group>
+
+                    <field name="notes" nolabel="1" colspan="2"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- VISTA ÁRBOL CALIFICACIONES -->
+    <record id="view_nota_tree" model="ir.ui.view">
+        <field name="name">plaiaundi.nota.tree</field>
+        <field name="model">plaiaundi.nota</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="student_id"/>
+                <field name="subject"/>
+                <field name="evaluation"/>
+                <field name="grade"/>
+                <field name="teacher_id"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+    <!-- ACCIÓN VISTA CALIFICACIONES -->
+    <record id="action_nota" model="ir.actions.act_window">
+        <field name="name">Calificaciones</field>
+        <field name="res_model">plaiaundi.nota</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

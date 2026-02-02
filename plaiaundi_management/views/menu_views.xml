@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_plaiaundi_root" 
+                  name="Gestión Plaiaundi" 
+                  sequence="10"
+                  web_icon="plaiaundi_management,static/description/icon.png"/>
+
+        <menuitem id="menu_academic_categ" 
+                  name="Gestión Académica" 
+                  parent="menu_plaiaundi_root" 
+                  sequence="10"/>
+
+        <menuitem id="menu_student" 
+                  name="Estudiantes" 
+                  parent="menu_academic_categ" 
+                  action="action_alumno" 
+                  sequence="10"/>
+
+        <menuitem id="menu_teacher" 
+                  name="Profesores" 
+                  parent="menu_academic_categ" 
+                  action="action_profesor" 
+                  sequence="20"/>
+
+        <menuitem id="menu_cycle" 
+                  name="Ciclos" 
+                  parent="menu_academic_categ" 
+                  action="action_ciclo" 
+                  sequence="30"/>
+                  
+        <menuitem id="menu_classroom" 
+                  name="Aulas" 
+                  parent="menu_academic_categ" 
+                  action="action_aula" 
+                  sequence="40"/>
+
+        <menuitem id="menu_resources_categ" 
+                  name="Recursos" 
+                  parent="menu_plaiaundi_root" 
+                  sequence="20"/>
+
+        <menuitem id="menu_equipment" 
+                  name="Equipamiento" 
+                  parent="menu_resources_categ" 
+                  action="action_equipo" 
+                  sequence="10"/>
+    </data>
+</odoo>

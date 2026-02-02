@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- VISTA FORMULARIO ASISTENCIA -->
+    <record id="view_asistencia_form" model="ir.ui.view">
+        <field name="name">plaiaundi.asistencia.form</field>
+        <field name="model">plaiaundi.asistencia</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2" colspan="2">
+                        <field name="student_id"/>
+                        <field name="teacher_id"/>
+                        <field name="date"/>
+                        <field name="status"/>
+                    </group>
+                    <field name="notes" nolabel="1" colspan="2"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- VISTA ÁRBOL ASISTENCIA -->
+    <record id="view_asistencia_tree" model="ir.ui.view">
+        <field name="name">plaiaundi.asistencia.tree</field>
+        <field name="model">plaiaundi.asistencia</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="student_id"/>
+                <field name="teacher_id"/>
+                <field name="date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <!-- ACCIÓN VISTA ASISTENCIA -->
+    <record id="action_asistencia" model="ir.actions.act_window">
+        <field name="name">Asistencias</field>
+        <field name="res_model">plaiaundi.asistencia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

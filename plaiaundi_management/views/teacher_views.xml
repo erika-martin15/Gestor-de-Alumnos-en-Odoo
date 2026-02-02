@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_profesor_form" model="ir.ui.view">
+        <field name="name">plaiaundi.profesor.form</field>
+        <field name="model">plaiaundi.profesor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Archivado" bg_color="bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="teacher_code"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="specialization"/>
+                            <field name="ciclo_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_profesor_tree" model="ir.ui.view">
+        <field name="name">plaiaundi.profesor.tree</field>
+        <field name="model">plaiaundi.profesor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="teacher_code"/>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="specialization"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_profesor" model="ir.actions.act_window">
+        <field name="name">Profesores</field>
+        <field name="res_model">plaiaundi.profesor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
