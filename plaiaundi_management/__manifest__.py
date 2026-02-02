@@ -9,10 +9,10 @@
         - Ciclos Formativos y Aulas
         - Inventario de Equipamiento Informático y Mantenimiento
     """,
-    'author': "Erika Martin",
+    'author': "Plaiaundi",
     'website': "https://www.plaiaundi.com",
     'category': 'Education',
-    'version': '17.0.1.0.0',
+    'version': '18.0.1.0.0',
     'depends': ['base'],
 
     # LA CLAVE ESTÁ AQUÍ: EL ORDEN IMPORTA

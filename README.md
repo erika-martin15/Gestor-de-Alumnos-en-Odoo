@@ -33,5 +33,5 @@ El código está organizado siguiendo las mejores prácticas de desarrollo en Od
 
 ## Requisitos
 
-- Odoo 17.0 o superior.
+- Odoo 17.0, 18.0 o superior.
 - Python 3.10 o superior.
