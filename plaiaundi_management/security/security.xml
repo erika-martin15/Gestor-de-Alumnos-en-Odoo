@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data>
         <record id="module_category_plaiaundi" model="ir.module.category">
-            <field name="name">Gestión de Plaiaundi</field>
-            <field name="description">Categoría para la gestión de Plaiaundi</field>
+            <field name="name">Gestion de Plaiaundi</field>
+            <field name="description">Categoria para la gestion de Plaiaundi</field>
             <field name="sequence">10</field>
         </record>
 
