@@ -9,14 +9,14 @@
 
         <record id="group_plaiaundi_user" model="res.groups">
             <field name="name">Usuario</field>
-            <field name="category_id" ref="module_category_plaiaundi"/>
+            <field name="category_id" ref="plaiaundi_management.module_category_plaiaundi"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
 
         <record id="group_plaiaundi_manager" model="res.groups">
             <field name="name">Administrador</field>
-            <field name="category_id" ref="module_category_plaiaundi"/>
-            <field name="implied_ids" eval="[(4, ref('group_plaiaundi_user'))]"/>
+            <field name="category_id" ref="plaiaundi_management.module_category_plaiaundi"/>
+            <field name="implied_ids" eval="[(4, ref('plaiaundi_management.group_plaiaundi_user'))]"/>
             <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
         </record>
     </data>
